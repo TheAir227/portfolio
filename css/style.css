@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'uni';
+    src: url(../font/Uni\ Sans\ Heavy.otf);
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'uni';
+    scroll-behavior: smooth;
+}
+
+::selection{
+    background-color: #FE2222;
+    color: white;
+}
+
+.container{
+    width: 100%;
+    max-width: 1432px;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 48px;
+    color: #33CFC6;
+}
+h2{
+    color: #389791;
+    font-size: 32px;
+}
+h3{
+    font-size: 30px;
+    color: #33CFC6;
+    white-space: nowrap;
+}
+span{
+    color: #FE2222;
+}
+
+/* шапка */
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 0px;
+}
+nav a{
+    color: #33CFC6;
+    transition: .5s;
+    font-size: 20px;
+    word-spacing: 20px;
+}
+nav a:hover{
+    color: #FE2222;
+}
+.menu{
+    display: flex;
+    gap: 20px;
+}
+/* шапка */
+/* банер */
+.baner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.networks{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.baner-text-bottom{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #389791;
+}
+.baner-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 140px;
+}
+.baner-text-top{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+.btn{
+    font-size: 24px;
+    color: #33CFC6;
+    padding: 10px 35px;
+    border: #33CFC6 6px solid;
+    border-radius: 5px;
+    position: relative;
+    transition: .5s;
+}
+.btn:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 120%;
+    transform: rotate(10deg) translateY(-5px);
+    border-radius: 5px;
+    z-index: -1;
+    background-color: #FE2222;
+    transition: .5s ease-out;
+}
+.btn:hover::after{
+    width: 100%;
+}
+.btn:hover{
+    color: white;
+    border: white 6px solid;
+}
+.networks svg, path, rect{
+    transition: .5s;
+}
+
+.networks svg:hover path, .networks svg:hover rect{
+    stroke: #FE2222;
+}
+.networks svg:hover .path-tg{
+    fill: #FE2222;
+}
+/* банер */
+
+/* линия слева */
+.line{
+    position: absolute;
+    top: 65px;
+    left: 103px;
+}
+.line .stroke:nth-child(1){
+    width: 6px;
+    height: 250px;
+    background-color: #FE2222;
+    border-radius: 5px;
+}
+.line .stroke:nth-child(3){
+    width: 6px;
+    height: 450px;
+    background-color: #33CFC6;
+    border-radius: 5px;
+}
+.line .circle{
+    width: 50px;
+    height: 50px;
+    background-color: #FE2222;
+    border: 5px solid white;
+    box-shadow: 0px 0px 20px #FE2222;
+    border-radius: 50%;
+    position: absolute;
+    top: 240px;
+    left: -20px;
+}
+/* линия слева */
+/* блок */
+
+.text-grid{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    width: 340px;
+    align-items: center;
+    gap: 20px 0px;
+}
+
+.block{
+    position: relative;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.block-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.block-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 30px;
+    width: 100%;
+}
+.block-text p{
+    font-size: 18px;
+}
+.block-text .btn{
+    font-size: 18px;
+}
+.block-btn{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    color: #389791;
+}
+.block::after{
+    content: '';
+    width: 50%;
+    height: 5px;
+    background-color: #33CFC6;
+    position: absolute;
+    left: -240px;
+    top: -100px;
+}
+.il::before, .il2::before, .il3::before, .il4::before{
+    width: 55px;
+    height: 183px;
+    content: '';
+    background-size: 100%;
+    position: absolute;
+    top: -100px;
+    left: -150px;
+}
+.il::before{
+    background: url(../images/items/ilustration1.png) no-repeat center;
+}
+.il2::before{
+    background: url(../images/items/ilustration2.png) no-repeat center;
+    width: 86px;
+    height: 265px;
+}
+.il3::before{
+    background: url(../images/items/ilustration3.png) no-repeat center;
+    width: 74px;
+    height: 271px;
+}
+.il4::before{
+    background: url(../images/items/ilustration1.png) no-repeat center;
+}
+.block-img{
+    display: flex;
+    position: relative;
+    gap: 20px;
+}
+.block-img::after{
+    position: absolute;
+    content: '';
+    bottom: -55px;
+    right: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #33CFC6;
+}
+.block-img img{
+    width: 260px;
+}
+
+.block:nth-child(5) .block-img img, .block:nth-child(6) .block-img img{
+    width: 400px !important;
+    height: 200px;
+    object-fit: cover;
+}
+.block:nth-child(6) .block-img img{
+    width: 400px !important;
+    height: 230px;
+    object-fit: cover;
+}
+/* блок */
+/* подвал */
+footer{
+    background-color: #33CFC6;
+    margin-top: 90px;
+    padding: 45px 0px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer img{
+    width: 95px;
+    height: 95px;
+}
+.footer-logo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.footer-text{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer-text p, .footer-text a{
+    color: white;
+}
+.footer-networks{
+    display: flex;
+    gap: 30px;
+}
+/* подвал */
